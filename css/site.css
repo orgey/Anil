@@ -1,0 +1,153 @@
+* {
+    font-family: Courier;
+}
+
+body {
+    background: #151418;
+}
+
+.square {
+
+    width: 450px;
+    height: 450px;
+    background: #2058d5;
+    position: fixed;
+    transform: rotate(45deg);
+    margin-left: -600px;
+    z-index: -1;
+    border-radius: 40%;
+    margin-top: 50px;
+    opacity: 0.5;
+
+}
+
+.square2 {
+
+    margin-left: 900px;
+    transform: rotate(45deg) scale(0.1);
+}
+
+.square3 {
+
+    margin-top: 200px;
+    margin-left: 200px;
+    transform: rotate(15deg) scale(0.05);
+    background: #DB123C;
+}
+
+.square4 {
+    background: #313030;
+    margin-left: 85rem;
+    margin-top: 100px;
+    transform: rotate(25deg) scale(0.5);
+    border-radius: 35%;
+
+}
+
+.square5 {
+    background: #DB123C;
+    margin-left: 45rem;
+    margin-top: 1000px;
+    transform: rotate(145deg) scale(0.5);
+    border-radius: 35%;
+}
+
+.bot1 {
+    margin-top: 800px;
+    width: 4650px;
+    height: 1900px;
+    margin-left: -900px;
+    transform: rotate(15deg);
+    border-radius: 70%;
+    background: #313030;
+
+}
+
+.card {
+    border-radius: 20px;
+    opacity: 0.8;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+    position: relative;
+    background: #242329;
+    color: white;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+    opacity: 1;
+
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+.card-header {
+    background-color: #DB123C;
+    color: gainsboro;
+    font-weight: bold;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 24px;
+}
+
+.javascript>.card-header {
+    background-color: #2058d5;
+}
+
+.circle {
+    max-width: 45%;
+    max-height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid #242329;
+    border-radius: 100%;
+    background: #242329;
+    margin: 10px auto auto auto;
+    left: 0;
+    right: 0;
+    font-size: 1.1rem;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.card-title {
+    margin-bottom: 50px;
+    font-weight: bold;
+
+}
+
+.card-text {
+    margin-bottom: 50px;
+}
+
+.btn {
+    transition: .5s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+
+    font-weight: bold;
+    font-size: larger;
+}
+
+.nav-link {
+    font-size: smaller;
+
+}
+.nav-link:hover {
+    transform: scale(1.05);
+
+}
+
+.git {
+    color: #242329;
+    z-index: 1;
+    margin-top: -45px;
+
+}
+
+.git:hover {
+  
+    transform: scale(1.05);
+    
+}

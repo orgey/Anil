@@ -1,0 +1,57 @@
+html, body {
+    height: 100%;
+    background: #3d3358;
+    font-family: monospace;
+
+}
+.basliklar{
+    margin-top:30px;
+   
+}
+.todo{
+
+    min-height: 90%;
+
+}
+.bekliyor{
+   background: #ffce56;
+    min-height: 90%;
+}
+.yapiliyor{
+    background: #9966ff;
+    
+    min-height: 90%;
+}
+.tamamlandi{
+    background: #ff6384;
+    min-height: 90%;
+}
+.form-control{
+    height: 24px;
+}
+.cerceve{
+    max-width: 400px !important;
+}
+.butonlar{
+    margin-top: 50px;
+    max-width: 40% !important; 
+    min-width: 20% !important; 
+}
+.ekle{
+    max-width: 60% !important; 
+}
+#todoekle{
+    max-height: 31px;
+    align-items: center;
+}
+#sil{
+    max-height: 31px;
+    max-width: 60%;
+    align-items: center;
+}
+ul{
+    padding-left: 0;
+}
+.acikgri{
+    background: #808080;
+}
