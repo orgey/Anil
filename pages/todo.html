@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/todo.css">
+    <link rel="stylesheet" href="../css/border.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container butonlar d-flex flex-wrap justify-content-center justify-content-lg-between">
+        <div class="input-group ekle col-12 col-lg-5 my-5 my-lg-0">
+            <button class="btn btn-primary text-light" type="button" id="todoekle"><i
+                    class="bi bi-plus fs-6 fw-bold"></i></button>
+            <textarea id="todoyazi" class="form-control" aria-label="To Do Yeni Gorev Ekle"
+                placeholder="To Do"></textarea>
+        </div>
+        <button class="btn btn-danger col-12 col-lg-4 fs-6" type="button" id="sil">Hepsini Sil</button>
+    </div>
+    <div class="container d-flex flex-wrap todo text-white justify-content-center justify-content-lg-between">
+        <div class="bekliyor card col-3 pt-5 mx-2 cerceve" ondrop="birak(event)" ondragover="allowDrop(event)">
+            <h3 class="text-center mb-5">Bekleniyor</h3>
+            <ul id="bekliyorList" class="justify-content-center"></ul>
+
+        </div>
+        <div class="yapiliyor col-3 mx-2 cerceve" ondrop="birak(event)" ondragover="allowDrop(event)">
+            <h3 class="text-center text-white mb-5">Yapilanlar</h3>
+            <ul id="yapiliyorList" class="justify-content-center"></ul>
+
+        </div>
+        <div class="tamamlandi col-3  mx-2 cerceve" ondrop="birak(event)" ondragover="allowDrop(event)">
+            <h3 class="text-center mb-5">Tamamlandi</h3>
+            <ul id="tamamlandiList"></ul>
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+    <script src="../js/todo.js"></script>
+</body>
+
+</html>
