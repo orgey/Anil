@@ -9,45 +9,82 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/todo.css">
     <link rel="stylesheet" href="../css/border.css">
+    <link rel="stylesheet" href="../css/btn.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
 </head>
 
 <body>
-    <div class="container butonlar d-flex flex-wrap justify-content-center justify-content-lg-between">
-        <div class="input-group ekle col-12 col-lg-5 my-5 my-lg-0">
+
+    <div
+        class="container butonlar d-flex flex-wrap flex-md-nowrap justify-content-center justify-content-lg-between ps-0">
+
+        <button id="baslikEkleme" class="btnadd btn-two border-0 col-12 col-lg-3 mw-100" data-bs-toggle="modal"
+            data-bs-target="#modal-goster"><span>Yeni Baslik</span></button>
+
+        <div class="input-group ekle 2-100 col-12 col-lg-3 my-5 my-lg-0 mx-0 mx-lg-5">
             <button class="btn btn-primary text-light" type="button" id="todoekle"><i
                     class="bi bi-plus fs-6 fw-bold"></i></button>
             <textarea id="todoyazi" class="form-control" aria-label="To Do Yeni Gorev Ekle"
                 placeholder="To Do"></textarea>
         </div>
-        <button class="btn btn-danger col-12 col-lg-4 fs-6" type="button" id="sil">Hepsini Sil</button>
-    </div>
-    <div class="container d-flex flex-wrap todo text-white justify-content-center justify-content-lg-between">
-        <div class="bekliyor card col-3 pt-5 mx-2 cerceve" ondrop="birak(event)" ondragover="allowDrop(event)">
-            <h3 class="text-center mb-5">Bekleniyor</h3>
-            <ul id="bekliyorList" class="justify-content-center"></ul>
-
+        <div class="buttonHover col-12 col-lg-3" id="sil">
+            <p class="btnText">Delete All?</p>
+            <div class="btnTwo">
+                <p class="btnText2">Sure?!</p>
+            </div>
         </div>
-        <div class="yapiliyor col-3 mx-2 cerceve" ondrop="birak(event)" ondragover="allowDrop(event)">
-            <h3 class="text-center text-white mb-5">Yapilanlar</h3>
-            <ul id="yapiliyorList" class="justify-content-center"></ul>
-
-        </div>
-        <div class="tamamlandi col-3  mx-2 cerceve" ondrop="birak(event)" ondragover="allowDrop(event)">
-            <h3 class="text-center mb-5">Tamamlandi</h3>
-            <ul id="tamamlandiList"></ul>
-
-        </div>
-
-
     </div>
 
+    <div id="todos"
+        class="container d-flex flex-wrap todo text-white justify-content-center justify-content-lg-around">
+    </div>
+
+    <div id="modal-goster" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Yeni Eklenecek Baslik</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <textarea id="baslikyazi" class="form-control" aria-label="eklenecekBaslik"
+                        placeholder="Yeni Eklenecek Basligi Girin"></textarea>
+                </div>
+                <div class="colors container text-center mt-3">
+                    <h4>Renk Secin</h4>
+                    <div class="row  justify-content-between my-3 mx-2">
+                        <div class="color" onclick='renkaktif(id)' id="color0"></div>
+                        <div class="color" onclick='renkaktif(id)' id="color1"></div>
+                        <div class="color" onclick='renkaktif(id)' id="color2"></div>
+                        <div class="color" onclick='renkaktif(id)' id="color3"></div>
+                        <div class="color" onclick='renkaktif(id)' id="color4"></div>
+                    </div>
+                    <div class="row justify-content-between my-3 mx-2">
+                        <div class="color" onclick='renkaktif(id)' id=" color5"></div>
+                        <div class="color" onclick='renkaktif(id)' id=" color6"></div>
+                        <div class="color" onclick='renkaktif(id)' id=" color7"></div>
+                        <div class="color" onclick='renkaktif(id)' id=" color8"></div>
+                        <div class="color" onclick='renkaktif(id)' id=" color9"></div>
+                    </div>
+                    <div class="row justify-content-between">
+
+                    </div>
 
 
+                </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-        crossorigin="anonymous"></script>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="save">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
         crossorigin="anonymous"></script>
@@ -55,3 +92,4 @@
 </body>
 
 </html>
+

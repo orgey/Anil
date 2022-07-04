@@ -1,57 +1,180 @@
-html, body {
+html,
+body {
     height: 100%;
     background: #3d3358;
     font-family: monospace;
+}
+
+.basliklar {
+    margin-top: 30px;
 
 }
-.basliklar{
-    margin-top:30px;
-   
-}
-.todo{
+
+.todo {
 
     min-height: 90%;
 
 }
-.bekliyor{
-   background: #ffce56;
+
+.Bekliyor {
+    background: #ffce56;
     min-height: 90%;
 }
-.yapiliyor{
+
+.Yapiliyor {
     background: #9966ff;
-    
+
     min-height: 90%;
 }
-.tamamlandi{
+
+.Tamamlandi {
     background: #ff6384;
     min-height: 90%;
 }
-.form-control{
+
+.form-control {
     height: 24px;
 }
-.cerceve{
+
+.cerceve {
     max-width: 400px !important;
+    min-height: 400px;
 }
-.butonlar{
+
+.butonlar {
     margin-top: 50px;
-    max-width: 40% !important; 
-    min-width: 20% !important; 
+    max-width: 60% !important;
+    min-width: 20% !important;
 }
-.ekle{
-    max-width: 60% !important; 
+
+.yenibaslik {
+    background: #6ba183;
+    color: antiquewhite;
+
 }
-#todoekle{
-    max-height: 31px;
-    align-items: center;
+
+.yenibaslik:hover {
+    background: #6ba183a8;
+    transition: all 0.3s;
+
 }
-#sil{
+
+.ekle {
+    max-width: 50% !important;
+}
+
+#todoekle {
+    max-height: 31px !important;
+    max-width: 31px !important;
+    align-items: center !important;
+}
+
+#sil {
     max-height: 31px;
     max-width: 60%;
     align-items: center;
 }
-ul{
+
+ul {
     padding-left: 0;
 }
-.acikgri{
+
+.acikgri {
     background: #808080;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+
+#holder {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    background: white;
+    padding: 10px;
+    width: 250px;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-65%);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+}
+
+.buttonHover {
+    background: #b5303d;
+    overflow: hidden;
+    align-items: center;
+
+    text-align: center;
+    transition: .2s;
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+}
+
+.btnTwo {
+
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin-top: -100px;
+    padding-top: 2px;
+    background: #26A69A;
+    left: -250px;
+    transition: .3s;
+    align-items: center;
+
+}
+
+.btnText {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;
+    transition: .3s;
+}
+
+.btnText2 {
+    margin-top: 72px;
+    margin-right: -130px;
+    color: #FFF;
+}
+
+.buttonHover:hover .btnTwo {
+    /*When hovering over .button change .btnTwo*/
+    left: -130px;
+}
+
+.buttonHover:hover .btnText {
+    /*When hovering over .button change .btnText*/
+    margin-left: 65px;
+}
+
+.buttonHover:active {
+    /*Clicked and held*/
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
+}
+
+.color {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: #26A69A;
+    cursor: pointer
+}
+
+.activeRenk {
+
+    border-style: solid;
+
+}
+
+i:hover {
+    transform: scale(1.2);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+a:hover{
+    transform: scale(1.2);
+    transition: all 0.3s;
+    cursor: pointer;
 }

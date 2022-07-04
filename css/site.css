@@ -151,3 +151,9 @@ body {
     transform: scale(1.05);
     
 }
+.github{
+    min-height: 5rem;
+margin-top: -2.5rem;
+}
+.navigate{
+min-height: 1rem;}
