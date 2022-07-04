@@ -101,7 +101,7 @@ body {
   }
 
   to {
-    transform: translate(500px, 100px) rotate(-10deg);
+    transform: translate(1500px, 600px) rotate(-10deg);
     border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
   }
 }

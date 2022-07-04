@@ -152,8 +152,45 @@ body {
     
 }
 .github{
-    min-height: 5rem;
+min-height: 5rem;
 margin-top: -2.5rem;
 }
 .navigate{
 min-height: 1rem;}
+.box{
+
+    padding: 0px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    transition: all linear 0.1s;	
+    box-shadow: inset 0px 0px 80px 5px rgba(0,0,0,0.4), 10px 10px 100px black;
+
+}
+
+
+
+
+
+.box:hover:after{
+    padding: 0px;
+
+    position: absolute;
+    height: 105%;
+    left: -2.5%;
+    top:-2.5%;
+    width: 105%;
+    border-radius: 20px;
+    
+    content: "";
+    transition: all linear 0.1;
+    box-shadow: 0px 0px 50px #843af3, inset 0px 0px 50px #843af3;
+}
+
+.box:hover{
+    color: rgb(255, 179, 0);
+    box-shadow: inset 0px 0px 80px 5px rgba(0,0,0,0);
+}
+
+
+a{
+    z-index: 99;
+}
