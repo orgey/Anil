@@ -3,23 +3,23 @@ var todos = document.getElementById('todos')
 let renkler = ['#ffce56', '#9966ff', '#ff6384', '#F6D99F', ' #F7B6BE', '#77DD77 ', '#79addc', '#A484E9', '#FFAF68', '#BC789E'];
 var sayac = 0;
 var secilirenk = '';
-var basliksirasi=0;
+var basliksirasi = 0;
 if (localStorage.length == 0) {
     var basliklar = [
-        ['Bekliyor', renkler[0],basliksirasi],
-        ['Yapiliyor', renkler[1],basliksirasi+1],
-        ['Tamamlandi', renkler[2],basliksirasi+2]
+        ['Bekliyor', renkler[0], basliksirasi],
+        ['Yapiliyor', renkler[1], basliksirasi + 1],
+        ['Tamamlandi', renkler[2], basliksirasi + 2]
     ];
     for (let i = 0; i < 3; i++) {
         localStorage.setItem(basliklar[i][0], JSON.stringify(basliklar[i]))
     }
-    basliksirasi=3;
+    basliksirasi = 3;
 }
 else {
-    basliksirasi=localStorage.length;
+    basliksirasi = localStorage.length;
     var basliklar = new Array(localStorage.length);
     for (var i = 0; i < basliklar.length; i++) {
-       
+
         basliklar[JSON.parse(localStorage.getItem(localStorage.key(i)))[2]] = JSON.parse(localStorage.getItem(localStorage.key(i)))
     }
 }
@@ -105,15 +105,15 @@ function sil(e) {
     }
     if (e.target.className == 'bi bi-trash fs-1 col-1') {
         var degistir = false;
-        for (var i = 0; i < basliklar.length; i++){
-            if(degistir){
-                basliklar[i][2]=i-1
-                basliklar[i-1]=basliklar[i]
+        for (var i = 0; i < basliklar.length; i++) {
+            if (degistir) {
+                basliklar[i][2] = i - 1
+                basliklar[i - 1] = basliklar[i]
             }
-            if(basliklar[i][0]==e.target.parentElement.parentElement.classList[0]){
-            degistir=true;
+            if (basliklar[i][0] == e.target.parentElement.parentElement.classList[0]) {
+                degistir = true;
             }
-            
+
         }
         basliklar.pop()
         window.localStorage.removeItem(e.target.parentElement.parentElement.classList[0])
@@ -131,12 +131,21 @@ function sil(e) {
     renk();
 }
 function hepsiniSil() {
-    if (confirm('Hepsini Silmek Istediginden Emin Misin?')) {
-        localStorage.clear()
-        for (var i = 0; i < basliklar.length; i++)
-            document.getElementById(basliklar[i][0] + 'List').innerHTML = ''
-
+    if(sayac==0){
+        alert('Silinecek Öge Yok!')
+        return;
     }
+    if (confirm('Hepsini Silmek Istediginden Emin Misin?')) {
+        sayac=0;
+        document.getElementById('todos').innerHTML = ''
+        for (var i = 0; i < basliklar.length; i++) {
+            basliklar[i] = basliklar[i].slice(0, 3)
+            localStorage.setItem(basliklar[i][0], JSON.stringify(basliklar[i]))
+        }
+    }
+
+    loadEkleme();
+    olusturma();
 }
 function bekleniyorEkle(e) {
     e.preventDefault();
@@ -204,7 +213,7 @@ function olusturma() {
     for (let i = 0; i < basliklar.length; i++) {
         todos.innerHTML += ' <div class=" ' + basliklar[i][0] + ' pt-5 mx-2 cerceve" ondrop="birak(event)" ondragover="allowDrop(event)"><div class="row"><h3 class="text-center mb-5 col-10">' + basliklar[i][0] + '</h3><i class="bi bi-trash fs-1 col-1"></i></div><ul id="' + basliklar[i][0] + 'List" class="justify-content-center"></ul></div>'
         // document.getElementsByClassName[basliklar[i][0]][0].background = basliklar[i][1]
-       
+
         document.getElementsByClassName(basliklar[i][0])[0].style.background = basliklar[i][1]
 
     }
@@ -246,7 +255,7 @@ function yeniBaslikEkleme(e) {
     }
 
     const cerceveler = document.querySelectorAll('.cerceve');
-    document.getElementById('baslikyazi').value =''
+    document.getElementById('baslikyazi').value = ''
     cerceveler.forEach(div => {
         div.remove();
     });

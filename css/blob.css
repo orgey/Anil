@@ -105,3 +105,7 @@ body {
     border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
   }
 }
+a:hover{
+  transform: scale(1.1);
+  transition: 0.1s
+}
