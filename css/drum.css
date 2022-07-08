@@ -1,0 +1,148 @@
+#imgDrum {
+    position: absolute;
+    left: 600px;
+    width: 1300px;
+    margin-top: 2%;
+}
+
+.drums {
+    z-index: 2;
+    border: solid transparent;
+    background-color: #777777;
+    opacity: 0.1;
+}
+.drums:active{
+    background-color: #777777;
+    opacity: 0.4;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#bass {
+    position: absolute;
+    top: 540px;
+    left: 1145px;
+    width: 400px;
+    height: 400px;  
+    border-radius: 1000px;
+}
+#tom1{
+    position: absolute;
+    top: 320px;
+    left: 1370px;
+    width: 180px;
+    height: 200px;
+    border-radius: 70px;
+}
+#tom2{
+    position: absolute;
+    top: 310px;
+    left: 1133px;
+    width: 220px;
+    height: 220px;
+    border-radius: 70px;
+}
+#tom3{
+    position: absolute;
+    top: 480px;
+    left: 980px;
+    width: 230px;
+    height: 244px;
+    border-radius: 40px;
+}
+#tom4{
+    position: absolute;
+    top: 480px;
+    left: 800px;
+    width: 230px;
+    height: 265px;
+    border-radius: 40px;
+}
+#snare{
+    position: absolute;
+    top: 315px;
+    left: 1360px;
+    width: 190px;
+    height: 200px;
+    border-radius: 70px;
+}
+#hihattop{
+    position: absolute;
+    top: 317px;
+    left: 1660px;
+    width: 200px;
+    height: 19px;
+    border-radius: 150px 150px 0 0;
+
+}
+
+#hihatbot{
+    position: absolute;
+    top: 343px;
+    left: 1660px;
+    width: 200px;
+    height: 17px;
+    border-radius:0 0 150px 150px ;
+
+}
+#cymbal1{
+    position: absolute;
+    top: 70px;
+    left: 1432px;
+    width: 260px;
+    height: 120px;
+    border-radius: 2240px;
+    transform: rotate(-10deg);
+}
+#cymbal2{
+    position: absolute;
+    top: 55px;
+    left: 967px;
+    width: 300px;
+    height: 150px;
+    border-radius: 2240px;
+    transform: rotate(10deg);
+}
+#cymbal3{
+    position: absolute;
+    top: 365px;
+    left: 737px;
+    width: 320px;
+    height: 70px;
+    border-radius: 2240px;
+    transform: rotate(15deg);
+}
+#crash{
+    position: absolute;
+    top: 260px;
+    left: 627px;
+    width: 300px;
+    height: 32px;
+    border-radius: 2240px;
+    transform: rotate(25deg);
+}
+#snare{
+    position: absolute;
+    top: 455px;
+    left: 1410px;
+    width: 235px;
+    height: 124px;
+    border-radius: 70px;
+}
+#hihatdurum{
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 1800px;
+    z-index: 3;
+}
+.box{
+    border: 1px solid #666;
+    max-width: 150px;
+    margin-bottom:13px;
+}
+input{
+    max-width: 150px;
+}
+p{
+    margin-bottom: 5px;
+}

@@ -31,7 +31,7 @@ function jscript() {
 
 }
 function hepsi() {
-    for (let i = 0; i < jsitems.length; i++) {
+    for (let i = 000; i < jsitems.length; i++) {
         jsitems[i].classList.remove('d-none')
     }
     for (let i = 0; i < wtitems.length; i++) {

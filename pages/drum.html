@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/drum.css">
+</head>
+
+<body>
+
+
+    <img id="imgDrum" src="../img/Drum/drum.jpg" alt="">
+    <button id="bass" onclick="Play('bass')" onclick="Play(bass)" class="drums"></button>
+    <button id="tom1" onclick="Play('tom1')" class="drums"></button>
+    <button id="tom2" onclick="Play('tom2')" class="drums"></button>
+    <button id="tom3" onclick="Play('tom3')" class="drums"></button>
+    <button id="tom4" onclick="Play('tom4')" class="drums"></button>
+    <button id="snare" onclick="Play('snare')" class="drums"></button>
+    <button id="hihattop" class="hihatclose drums" onclick="Play(hihattop.classList)"></button>
+    <button id="hihatbot" class="hihatclose drums" onclick="Play(hihattop.classList)"></button>
+    <button id="cymbal1" onclick="Play('cymbal1')" class="drums"></button>
+    <button id="cymbal2" onclick="Play('cymbal2')" class="drums"></button>
+    <button id="cymbal3" onclick="Play('cymbal3')" class="drums"></button>
+    <button id="crash" onclick="Play('crash')" class="drums"></button>
+    <button id="hihatdurum" onclick="hihatDurum(hihattop.classList)">Hihat Close</button>
+    <div class="keymap ms-5 pt-5">
+        <div class="box">
+            <p>Bass</p>
+            <input id="basskey" class="tuslar" type="text" value="v" maxlength="1" >
+        </div>
+        <div class="box">
+            <p>Tom1</p>
+            <input id="tom1key" class="tuslar" type="text" value="f" maxlength="1">
+        </div>
+        <div class="box">
+            <p>Tom2</p>
+            <input id="tom2key" class="tuslar" type="text" value="g" maxlength="1">
+        </div>
+        <div class="box">
+            <p>Tom4</p>
+            <input id="tom4key" class="tuslar" type="text" value="h" maxlength="1">
+        </div>
+        <div class="box">
+            <p>Snare</p>
+            <input id="snarekey" class="tuslar" type="text" value="j" maxlength="1">
+        </div>
+        <div class="box">
+            <p>Hihat Close</p>
+            <input id="hihatclose drumskey" class="tuslar" type="text" value="i" maxlength="1">
+        </div>
+        <div class="box">
+            <p>Hihat Open</p>
+            <input id="hihatopen drumskey" class="tuslar" type="text" value="o" maxlength="1">
+        </div>
+        <div class="box">
+            <p>Cymbal1</p>
+            <input id="cymbal1key" class="tuslar" type="text" value="e" maxlength="1">
+        </div>
+        <div class="box">
+            <p>Cymbal2</p>
+            <input id="cymbal2key" class="tuslar" type="text" value="r" maxlength="1">
+        </div>
+        <div class="box">
+            <p>Cymbal3</p>
+            <input id="cymbal3key" class="tuslar" type="text" value="t" maxlength="1">
+        </div>
+        <div class="box">
+            <p>Crash</p>
+            <input id="crashkey" class="tuslar" type="text" value="y" maxlength="1">
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <script src="../js/drum.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
