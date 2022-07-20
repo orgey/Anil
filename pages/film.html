@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do</title>
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/film.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="card">
+        <div class="card-header p-2">
+          <h5 class="ms-3 mt-1">Film Projesi</h5>
+        </div>
+        <div class="card-body">
+          <div class="row justify-content-around">
+            <input
+              class="col-5"
+              id="isim"
+              type="text"
+              placeholder="Film Ismi"
+            />
+            <input
+              id="yonetmen"
+              class="col-5"
+              placeholder="Film Yonetmeni"
+              type="text"
+            />
+          </div>
+          <div class="row justify-content-around mt-3">
+            <input
+              id="afis"
+              class="col-5"
+              placeholder="Film Afis Linki"
+              type="text"
+            />
+            <div class="col-5"></div>
+          </div>
+          <div class="row justify-content-around mt-3">
+            <button class="col-2 btn-danger rounded" onclick="kaydet()">
+              Film Ekle
+            </button>
+            <div class="col-8"></div>
+          </div>
+
+          <hr />
+          <br /><br /><br />
+          <hr />
+          <h5>Filmler</h5>
+          <hr />
+          <div class="container bg-dark text-light">
+            <div class="row py-2 ">
+              <h6 class="col-3 mx-2">Film Afisi</h6>
+              <h6 class="col-3">Film Ismi</h6>
+              <h6 class="col-3">Film Yonetmen</h6>
+              <hr>
+            </div>
+            <div id="filmlerBody" class="filmler row py-2">
+              </div>
+            
+            
+            
+
+            </div>
+            <hr />
+          </div>
+          
+          <div class="row justify-content-center"><button class="btn-dark col-4 rounded mb-3 " onclick="clearLS()">
+            Tum Filmleri Temizleyin
+          </button></div>
+          
+        </div>
+      </div>
+    </div>
+    <script src="../js/film.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

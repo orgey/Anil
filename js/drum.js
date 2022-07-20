@@ -1,11 +1,9 @@
 function Play(kit) {
-    console.log(kit)
     var path = '../sounds/Drum/'
     var sound = new Audio(path + kit + '.wav');
     sound.play();
 }
 function hihatDurum(durum) {
-    console.log(durum)
 
 
     if (durum == 'hihatclose drums') {
@@ -24,10 +22,7 @@ function hihatDurum(durum) {
 // Add event listener on keypress
 document.addEventListener('keyup', (event) => {
     var basilan = event.key;
-    var code = event.code;
-    // Alert the key name and key code on keydown
-
-  
+ 
  var tuslar = document.getElementsByClassName('tuslar')
     checkDuplicate(tuslar,basilan);    
 }, false);
