@@ -9,11 +9,11 @@ function kaydet() {
     var link = document.getElementById('afis').value
     var yeniFilm = new Film(isim, yonetmen, link)
     films.push(yeniFilm)
-    show(isim,yonetmen,link)
+    show(isim, yonetmen, link)
     saveLS()
-    document.getElementById('isim').value=''
-    document.getElementById('yonetmen').value=''
-    document.getElementById('afis').value=''
+    document.getElementById('isim').value = ''
+    document.getElementById('yonetmen').value = ''
+    document.getElementById('afis').value = ''
 }
 
 
@@ -28,17 +28,17 @@ function show(title, director, url) {
     filmlerBody.innerHTML += eklenecek;
     eventEkleme()
 }
-function eventEkleme(){
+function eventEkleme() {
     var butonlar = document.getElementsByClassName('sil')
-    for(let i = 0 ; i < butonlar.length ; i ++)
-    butonlar[i].addEventListener('click', removeLS)
+    for (let i = 0; i < butonlar.length; i++)
+        butonlar[i].addEventListener('click', removeLS)
 }
 
 function checkLS() {
     if (localStorage.getItem('films') != null) {
         films = JSON.parse(localStorage.getItem('films'));
         for (let i = 0; i < films.length; i++) {
-            show(films[i].title,films[i].director,films[i].url)
+            show(films[i].title, films[i].director, films[i].url)
         }
     }
     else {
@@ -48,23 +48,27 @@ function checkLS() {
 function saveLS() {
     localStorage.setItem('films', JSON.stringify(films))
 }
-function removeLS(event) {    
+function removeLS(event) {
     event.preventDefault();
     console.log(films.length)
     console.log(event.target.id.slice(0, -6))
 
     for (let i = 0; i < films.length; i++) {
-        console.log('silinecek')
+
         if (films[i].title == event.target.id.slice(0, -6)) {
-            console.log('girdi')
+
             films.splice(i, 1)
-            
+
         }
     }
     event.target.parentElement.remove();
     saveLS();
 }
 function clearLS() {
+    var filmlerBody = document.getElementById('filmlerBody');
+    document.getElementById('filmlerBody').innerHTML='';
     localStorage.clear();
     films = [];
+
+
 }
